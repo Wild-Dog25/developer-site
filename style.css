@@ -1,0 +1,58 @@
+:root {
+  --bg: #faf8f9;
+  --card: #ffffff;
+  --text: #1c1b1f;
+  --sub: #5f5a60;
+  --line: #e7e1e4;
+  --brand: #b0436a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141215;
+    --card: #1e1b1f;
+    --text: #f2eef1;
+    --sub: #b3abb1;
+    --line: #342f34;
+    --brand: #eb8fae;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header { margin-bottom: 32px; }
+h1 { font-size: 1.6rem; margin: 0 0 4px; }
+h2 { font-size: 1.2rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+p, li { color: var(--text); }
+.sub { color: var(--sub); font-size: 0.9rem; }
+a { color: var(--brand); }
+.button {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.apps { list-style: none; padding: 0; display: grid; gap: 12px; }
+.apps li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+.apps .name { font-weight: 700; }
+.apps .links { font-size: 0.9rem; }
+.apps .links a { margin-right: 16px; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+th { background: var(--card); }
+footer { margin-top: 48px; color: var(--sub); font-size: 0.85rem; }
